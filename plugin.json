@@ -1,0 +1,12 @@
+{
+  "id": "hyperheadset",
+  "name": "HyperX Headset",
+  "version": "1.0.0",
+  "sdkVersion": "1.36",
+  "entryAssembly": "LoupixDeck.Plugin.HyperHeadset.dll",
+  "platform": "All",
+  "author": "FlyingSlig",
+  "description": "Battery level and charging status for HyperX headsets via hyper_headset_cli.",
+  "projectUrl": "https://github.com/FlyingSlig/LoupixDeck.Plugin.HyperHeadset",
+  "iconFile": ""
+}
