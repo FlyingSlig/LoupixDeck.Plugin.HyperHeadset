@@ -17,8 +17,8 @@ Restart LoupixDeck afterwards. The plugin id, `plugin.json#id` and the plugin fo
 
 - `HyperHeadsetPlugin.cs` — `LoupixPlugin` entry point, settings page (`IPluginSettingsPage`) and
   requirements (`IPluginRequirements`).
-- `BatteryCommand.cs` — the only command; implements `IValueDisplayCommand` and declares its
-  button layout (arc + value + detail).
+- `BatteryCommand.cs` — the only command; implements `IValueDisplayCommand` (the arc) and
+  `IDisplayImageCommand` (outlined percentage/status text). The key background is transparent.
 - `HeadsetMonitor.cs` — background poll loop, cached status, settings restart, `IDisposable`.
 - `HyperHeadsetClient.cs` — spawns `hyper_headset_cli --json`, enforces a timeout, extracts JSON.
 - `HeadsetStatus.cs` — snapshot record + JSON parsing + display strings.
@@ -37,4 +37,7 @@ Restart LoupixDeck afterwards. The plugin id, `plugin.json#id` and the plugin fo
    whole stream.
 6. Charging status is event-driven and may be absent from a read; `HeadsetMonitor` keeps the last
    known value while connected.
-7. Keep `Metadata.Version` and `plugin.json#version` in sync.
+7. The SDK's declarative button text layers have **no outline property**, so `BatteryCommand` draws
+   the percentage/status itself in `RenderImage` with `DrawText(..., outlined: true)`. The arc is
+   still a normal user-editable value layer.
+8. Keep `Metadata.Version` and `plugin.json#version` in sync.
