@@ -20,12 +20,17 @@ the fresh value.
 > built and tested against the author's headset and LoupixDeck installation, but it comes with no
 > warranty. Review the code before relying on it.
 
+> [!WARNING]
+> **Tested on Linux only.** The plugin uses the cross-platform HyperHeadset CLI, so it may work on
+> Windows (and macOS), but Windows support is untested — it might or might not work. Please report
+> what you find if you try it.
+
 ## Requirements
 
 - LoupixDeck with plugin SDK **1.36**
 - [HyperHeadset](https://github.com/LennardKittner/HyperHeadset) installed, with
   `hyper_headset_cli` on `PATH` (or configure its full path in the plugin settings)
-- Linux, macOS or Windows (wherever HyperHeadset runs)
+- Linux (tested); Windows and macOS are untested
 
 The plugin supports whatever headsets HyperHeadset supports.
 

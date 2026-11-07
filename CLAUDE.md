@@ -29,6 +29,7 @@ Restart LoupixDeck afterwards. The plugin id, `plugin.json#id` and the plugin fo
 1. **One** concrete `LoupixPlugin` subclass per assembly.
 2. `CommandName` (`HyperHeadset.Battery`) is a stable public API — never rename it.
 3. The SDK DLL is provided by the host; never ship `LoupixDeck.PluginSdk.dll`.
+4. Only tested on Linux so far. The CLI is cross-platform, but Windows/macOS behaviour is unverified.
 4. A read takes ~3 s because the CLI opens the HID device. Never run it from `GetValue`,
    `GetText` or any other polled/render callback — only from the monitor's background loop.
 5. `HYPERHEADSET_NO_AUTO_UDEV=1` is set for the child process. With it, the CLI prints a banner
