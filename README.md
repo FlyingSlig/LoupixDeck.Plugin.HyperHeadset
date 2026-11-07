@@ -15,6 +15,16 @@ When the headset is disconnected, the arc disappears, the caption reads `No head
 LoupixDeck dims the button. Pressing the button reads the headset immediately and redraws it with
 the fresh value.
 
+The plugin does **not** enable a key background by default, so the device/theme background shows
+through. If a key already carried a background from an earlier version, turn its **Background**
+toggle off once.
+
+> [!NOTE]
+> **Outline:** the plugin cannot pre-enable the button editor's **Outline** option for its text
+> layers. Plugin SDK 1.36's `ButtonLayerDescriptor` has no outline property, so the layers are
+> created with the host default (no outline). You can turn **Outline** on once in the button
+> editor; it is saved with the button afterwards.
+
 > [!NOTE]
 > **AI disclaimer:** this project was written with the help of an AI coding assistant. It has been
 > built and tested against the author's headset and LoupixDeck installation, but it comes with no

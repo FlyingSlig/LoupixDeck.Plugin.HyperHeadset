@@ -19,7 +19,6 @@ internal sealed class BatteryCommand(HeadsetMonitor monitor) : IValueDisplayComm
         ButtonLayout = new ButtonLayoutDescriptor
         {
             Mode = ButtonLayoutMode.Custom,
-            BackgroundColor = "#1C1C22",
             Layers =
             [
                 new ButtonLayerDescriptor
