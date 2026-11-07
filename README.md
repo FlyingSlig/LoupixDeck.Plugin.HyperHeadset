@@ -11,9 +11,6 @@ the CLI that ships with HyperHeadset, and renders:
 - the **charging status** (`Charging`, `Fully charged`, `Not charging`, `Charging error`)
   underneath.
 
-The key has a transparent background by default, and the percentage/status text is drawn with a
-dark outline so it stays readable over any wallpaper or theme.
-
 When the headset is disconnected, the arc disappears, the caption reads `No headset`, and
 LoupixDeck dims the button. Pressing the button reads the headset immediately and redraws it with
 the fresh value.
